@@ -1,0 +1,19 @@
+@import "./config";
+
+.head {
+  background-color: $color-primary;
+  color: $color-divider;
+  display: block;
+}
+
+.nav {
+  display: flex;
+  font-family: $font-blackcond;
+  font-size: 25px;
+  height: 100px;
+  justify-content: flex-start;
+  .navitem {
+    height: 50px;
+    width: 70px;
+  }
+}
