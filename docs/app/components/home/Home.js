@@ -6,15 +6,13 @@ const Home = function() {
   const clickHandler =()=>{console.log("haha");};
   return (
     <div>
-      <article>
-        <head className={style.head}>
-          <div className={style.nav}>
-            <div className={style.navitem}>Docs</div>
-            <div className={style.navitem}>Blog</div>
-            <div className={style.navitem}>Github</div>
-          </div>
-        </head>
-      </article>
+      <head className={style.head}>
+        <nav className={style.nav}>
+          <Link className={style.navitem} to="/">Docs</Link>
+          <Link className={style.navitem} to="/">Blog</Link>
+          <Link className={style.navitem} to="/">Github</Link>
+        </nav>
+      </head>
       <h2>this is not a home page</h2>
       <Link to="/about">About</Link>
       <br/>
