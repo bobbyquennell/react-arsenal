@@ -1,19 +1,38 @@
 @import "./config";
 
+.root {
+  width: 100%;
+}
+
 .head {
   background-color: $color-primary;
   color: $color-text;
-  display: block;
+  display: flex;
+  .icon {
+    height: 50px;
+    width: 50px;
+  }
 }
 
 .nav {
   display: flex;
   font-family: $font-blackcond;
-  font-size: 25px;
-  height: 100px;
+  font-size: 18px;
   justify-content: flex-start;
+  max-width: 940px;
+  width: 50%;
+  a {
+    color: $color-text;
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
   .navitem {
-    height: 50px;
-    width: 70px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
   }
 }

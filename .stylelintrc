@@ -28,6 +28,7 @@
       "ignoreTypes": ["/^__/"]
     }],
     "value-list-comma-newline-after": "always",
-    "string-quotes": "double"
+    "string-quotes": "double",
+    "max-nesting-depth": 3
   }
 }
