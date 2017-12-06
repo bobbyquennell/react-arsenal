@@ -1,5 +1,6 @@
 @import "~react-arsenal/colors"; // Import minimal colors
 @import "./palette";
+@import "mixins";
 $color-primary: $theme-blue;
 $color-secondary: $theme-red;
 $color-text: $theme-grey-white;

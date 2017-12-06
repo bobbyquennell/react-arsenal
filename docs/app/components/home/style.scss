@@ -34,5 +34,8 @@
     padding: 10px;
     text-align: center;
     width: 100%;
+    @include bp-small {
+      display: none;
+    }
   }
 }

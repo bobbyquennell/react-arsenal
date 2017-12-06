@@ -1,0 +1,35 @@
+// http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+
+@function calculaterem($size) {
+  $remsize: $size / 16px;
+  @return $remsize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculaterem($size);
+}
+
+@mixin breakpoint($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin bp-large {
+  @media only screen and (max-width: 60em) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media only screen and (max-width: 40em) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media only screen and (max-width: 30em) {
+    @content;
+  }
+}

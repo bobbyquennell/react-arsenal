@@ -21,7 +21,7 @@
       ]
     }],
     "color-hex-length": "long",
-    "at-rule-no-unknown": [true, {
+    "at-rule-no-unknown": [false, {
       "ignoreAtRules": ["rules"]
     }],
     "selector-type-no-unknown": [true, {
