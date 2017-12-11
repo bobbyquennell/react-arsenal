@@ -86,7 +86,21 @@
     text-align: center;
   }
   p {
+    line-height: 1.5;
     padding: 20px;
     text-align: center;
+  }
+}
+
+.footerblock {
+  background-color: $color-p;
+  color: $color-dark-contrast;
+  height: 50px;
+  p {
+    padding: 15px;
+    text-align: center;
+    max-width: 940px;
+    width: 100%;
+    margin: 0 auto;
   }
 }
