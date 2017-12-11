@@ -8,9 +8,38 @@
   background-color: $color-primary;
   color: $color-text;
   display: flex;
+  max-width: 940px;
+  margin: auto;
+  position: relative;
   .icon {
     height: 50px;
     width: 50px;
+  }
+}
+
+.headblock {
+  background-color: $color-primary;
+}
+
+.burger {
+  display: none;
+  @include bp-small {
+    display: block;
+  }
+  height: 28px;
+  width: 25px;
+  margin: 5px;
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  .burgerbar {
+    background-color: $color-dark-contrast;
+    height: 4px;
+    margin: 0 0 15%;
+    width: 100%;
+    .lastbar {
+      margin: 0;
+    }
   }
 }
 
@@ -18,11 +47,11 @@
   display: flex;
   font-family: $font-blackcond;
   font-size: 18px;
-  justify-content: flex-start;
+  justify-content: flex-end;
   max-width: 940px;
   width: 50%;
   a {
-    color: $color-text;
+    color: $color-dark-contrast;
     &:link,
     &:visited,
     &:hover,
@@ -37,5 +66,27 @@
     @include bp-small {
       display: none;
     }
+  }
+}
+
+.maincontent {
+  font-family: $font-blackcond;
+  font-size: 18px;
+  margin: 0 auto;
+  max-width: 940px;
+  position: relative;
+}
+
+.hero {
+  color: $color-p;
+  background-color: $color-dark-contrast;
+  border: 1px $color-light-contrast;
+  margin: 0 auto;
+  h2 {
+    text-align: center;
+  }
+  p {
+    padding: 20px;
+    text-align: center;
   }
 }
