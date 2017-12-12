@@ -1,0 +1,26 @@
+@import "../../theme/theme";
+.nav {
+  display: flex;
+  font-family: $font-blackcond;
+  font-size: 18px;
+  justify-content: flex-end;
+  max-width: 940px;
+  width: 50%;
+  a {
+    color: $color-dark-contrast;
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
+  .navitem {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    @include bp-small {
+      display: none;
+    }
+  }
+}

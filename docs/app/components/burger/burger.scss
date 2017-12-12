@@ -1,0 +1,30 @@
+@import "../../theme/theme";
+
+.burger {
+  display: none;
+  @include bp-small {
+    display: block;
+  }
+  height: 28px;
+  width: 25px;
+  margin: 5px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  .burgerbar {
+    background-color: $color-dark-contrast;
+    height: 4px;
+    margin: 0 0 15%;
+    width: 100%;
+    .lastbar {
+      margin: 0;
+    }
+  }
+  .barx {
+    color: $color-dark-contrast;
+    display: none;
+    @include bp-small {
+      display: block;
+    }
+  }
+}
