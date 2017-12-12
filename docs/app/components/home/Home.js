@@ -25,11 +25,11 @@ class Home extends React.Component {
     return (
       <div className={style.root}>
         <div className={style.headblock}>
-          <div className={style.head}>
-            <img className={style.icon} src="../../../../favicon.ico" alt=""/>
-            <Navigation/>
-            <Burger toggleHeadMenu={this.clickHandler}/>
-          </div>
+          <img className={style.icon} src="../../../../favicon.ico" alt=""/>
+          <Navigation className={style.flexitem}/>
+          <Burger toggleHeadMenu={this.clickHandler}/>
+          {/* <div className={style.head}>
+          </div> */}
         </div>
         <HeadMenu toggle={this.state.toggle}/>
         <div className={style.maincontent} >
