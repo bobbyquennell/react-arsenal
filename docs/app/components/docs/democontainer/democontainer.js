@@ -1,20 +1,45 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import React from 'react';
-
-class Example extends React.Component {
+class DemoContainer extends React.Component {
   constructor(props){
     super(props);
     this.state = {
       showCode: false
     };
   }
+
+  toggleCode = event =>{
+    event.preventDefault();
+    this.setSate(prevSate =>{
+      return { showCode: !prevSate.showCode};
+    });
+  }
+
   render() {
-    return null;
+    const { showCode } = this.state;
+    const { code, description, name} = this.props.demo;
+
+    //Must use CommonJS require to dynamically require because ES6 Modules must be
+    //statically analyzable.
+    const DemoComponent = require(`../../../../examples/${this.props.componentName}/${name}`).default;
+    return (
+      <div className="example">
+        {description && <h4>{description}</h4>}
+        <DemoComponent />
+        <p>
+          <a href="#" onClick={this.toggleCode}>
+            {showCode ? "Hide" : "Show"} Code
+          </a>
+        </p>
+        {showCode && code}
+      </div>
+    );
   }
 }
-Example.propTypes = {
 
+DemoContainer.propTypes = {
+  demo: PropTypes.object.isRequired
 };
-export default Example;
+
+export default DemoContainer;

@@ -1,6 +1,6 @@
 import React from 'react';
-import SideMenu from '../sidemenu/SideMemu';
-import ComponentPage from '../componentpage/ComponentPage';
+import SideMenu from './sidemenu/sidemenu';
+import ComponentPage from './componentpage/ComponentPage';
 import componentData from '../../../../config/componentData';
 export default class Docs extends React.Component {
   constructor(props){

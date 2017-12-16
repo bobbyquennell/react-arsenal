@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Example from './Example';
-import Props from './Props';
+import DemoContainer from '../democontainer/democontainer';
+import Api from '../api/api';
 
 const ComponentPage = ({component}) => {
   const {name, description, props, examples} = component;
@@ -13,13 +13,13 @@ const ComponentPage = ({component}) => {
       {
         examples.length > 0 ?
           examples.map( example=>
-            <Example key={example.code} example={example} componentName={name} />
+            <DemoContainer key={example.code} demo={example} componentName={name} />
           ) : "No examples exist."
       }
       <h3>Props</h3>
       {
         props ?
-          <Props props={props} /> :
+          <Api props={props} /> :
           "This component accepts no props."
       }
     </div>
