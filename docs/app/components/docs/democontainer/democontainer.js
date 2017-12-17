@@ -22,6 +22,7 @@ class DemoContainer extends React.Component {
 
     //Must use CommonJS require to dynamically require because ES6 Modules must be
     //statically analyzable.
+    console.log(`../../../../examples/${this.props.componentName}/${name}`);
     const DemoComponent = require(`../../../../examples/${this.props.componentName}/${name}`).default;
     return (
       <div className="example">
@@ -39,7 +40,8 @@ class DemoContainer extends React.Component {
 }
 
 DemoContainer.propTypes = {
-  demo: PropTypes.object.isRequired
+  demo: PropTypes.object.isRequired,
+  componentName: PropTypes.string.isRequired
 };
 
 export default DemoContainer;
