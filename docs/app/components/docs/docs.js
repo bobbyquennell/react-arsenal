@@ -8,6 +8,7 @@ import Header from '../header/header';
 import Footer from '../footer/footer';
 import Burger from '../burger/burger';
 import HeadMenu from '../headmenu/headmenu';
+
 export default class Docs extends React.Component {
   constructor(props){
     super(props);
@@ -42,6 +43,9 @@ export default class Docs extends React.Component {
           <Burger toggleHeadMenu={this.clickHandler}/>
         </Header>
         <HeadMenu toggle={this.state.toggle}/>
+        <br/>
+        <br/>
+        <br/>
         <SideMenu components={componentData.map(component => component.name)}/>
         <ComponentPage component={component} />
         <Footer/>
