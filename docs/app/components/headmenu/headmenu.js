@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 import style from './headmenu.scss';
 
 const HeadMenu = ({toggle})=>{
@@ -8,9 +9,15 @@ const HeadMenu = ({toggle})=>{
       {
         toggle ?(
           <div className={style.headmenu}>
-            <div className={style.menuitem}><a href="#" alt="menu item">Docs</a></div>
-            <div className={style.menuitem}><a href="#" alt="menu item">Blog</a></div>
-            <div className={style.menuitem}><a href="#" alt="menu item">Github</a></div>
+            <div className={style.menuitem}><Link to="/Docs">
+              Docs
+            </Link></div>
+            <div className={style.menuitem}><Link to="/">
+              Blog
+            </Link></div>
+            <div className={style.menuitem}><Link to="/">
+              Github
+            </Link></div>
           </div>):(<div/>)
       }
     </div>

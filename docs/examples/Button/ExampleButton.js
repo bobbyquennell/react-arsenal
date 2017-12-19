@@ -2,8 +2,12 @@
 import React from 'react';
 import Button from 'react-arsenal/Button';
 
+
+const clickHandler = ()=>{
+  console.log("clicked");
+};
 const ExampleButton = function(){
-  return (<Button onClick={()=>{ console.log("clicked me");}}/>);
+  return (<Button onClick={clickHandler}/>);
 };
 
 export default ExampleButton;

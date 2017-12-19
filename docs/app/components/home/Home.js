@@ -6,6 +6,8 @@ import Navigation from '../navigation/navigation';
 import Burger from '../burger/burger';
 import Footer from '../footer/footer';
 import HeadMenu from '../headmenu/headmenu';
+import Header from '../header/header';
+import Icon from '../icon/icon';
 
 class Home extends React.Component {
   constructor(props){
@@ -24,13 +26,12 @@ class Home extends React.Component {
   render(){
     return (
       <div className={style.root}>
-        <div className={style.headblock}>
-          <img className={style.icon} src="../../../../favicon.ico" alt=""/>
-          <Navigation className={style.flexitem}/>
+        <HeadMenu toggle={this.state.toggle}/>
+        <Header>
+          <Icon/>
+          <Navigation/>
           <Burger toggleHeadMenu={this.clickHandler}/>
-          {/* <div className={style.head}>
-          </div> */}
-        </div>
+        </Header>
         <HeadMenu toggle={this.state.toggle}/>
         <div className={style.maincontent} >
           <div className={style.hero}>
