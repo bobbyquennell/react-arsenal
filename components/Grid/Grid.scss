@@ -4,5 +4,33 @@
 }
 
 .item {
-  
+  flex: 0 1 auto;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.rowreverse {
+  flex-direction: row-reverse;
+}
+
+.justifystart {
+  justify-content: flex-start;
+}
+
+.justifycenter {
+  justify-content: center;
+}
+
+.justifyend {
+  justify-content: flex-end;
+}
+
+.justifyaround {
+  justify-content: space-around;
+}
+
+.justifybetween {
+  justify-content: space-between;
 }

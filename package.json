@@ -67,6 +67,7 @@
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "@rosskevin/react-docgen": "^3.0.0-beta9",
     "babel-cli": "^6.24.1",
     "babel-preset-flow": "^6.23.0",
     "chokidar": "^1.7.0",
