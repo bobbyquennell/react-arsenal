@@ -12,6 +12,7 @@ const Grid = (props)=>{
     container,
     direction,
     justify,
+    alignitems,
     item,
     children,
     ...otherProps
@@ -27,7 +28,13 @@ const Grid = (props)=>{
       [style.justifyend]: justify == 'flex-end',
       [style.justifycenter]: justify == 'center',
       [style.justifyaround]: justify == 'space-around',
-      [style.justifybetween]: justify == 'space-between'
+      [style.justifybetween]: justify == 'space-between',
+      [style.alignitemstart]: alignitems == 'flex-start',
+      [style.alignitemend]: alignitems == 'flex-end',
+      [style.alignitemcenter]: alignitems == 'center',
+      [style.alignitembaseline]: alignitems == 'baseline',
+      [style.alignitemstretch]: alignitems == 'stretch',
+
     },
     classNameProp
   );
@@ -59,6 +66,11 @@ Grid.propTypes = {
    'flex-start', 'center', 'flex-end', 'space-between', 'space-around'
    */
   justify: PropTypes.oneOf(['flex-start', 'center', 'flex-end', 'space-between', 'space-around']),
+  /**
+   * Defines the 'align-items' property for a flexbox container.
+   'flex-start', 'center', 'flex-end', 'baseline', 'stretch'
+   */
+  alignitems: PropTypes.oneOf(['flex-start', 'center', 'flex-end', 'baseline', 'stretch']),
   /** the content of the component*/
   children: PropTypes.node.isRequired
 };

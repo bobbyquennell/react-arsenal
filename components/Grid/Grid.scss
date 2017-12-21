@@ -34,3 +34,23 @@
 .justifybetween {
   justify-content: space-between;
 }
+
+.alignitemstart {
+  align-items: flex-start;
+}
+
+.alignitemend {
+  align-items: flex-end;
+}
+
+.alignitemcenter {
+  align-items: center;
+}
+
+.alignitembaseline {
+  align-items: baseline;
+}
+
+.alignitemstrech {
+  align-items: stretch;
+}

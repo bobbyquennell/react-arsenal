@@ -4,6 +4,7 @@ import DemoContainer from '../democontainer/democontainer';
 import Api from '../api/api';
 
 const ComponentPage = ({component}) => {
+  //console.log(component);
   const {name, description, props, examples} = component;
   return (
     <div className="componentpage">
