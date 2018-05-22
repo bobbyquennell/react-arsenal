@@ -11,6 +11,13 @@
   flex-direction: row;
 }
 
+.column {
+  flex-direction: column;
+}
+.columnreverse {
+  flex-direction: column-reverse;
+}
+
 .rowreverse {
   flex-direction: row-reverse;
 }
