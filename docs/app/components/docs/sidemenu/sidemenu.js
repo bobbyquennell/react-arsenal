@@ -1,19 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Grid from 'react-arsenal/Grid';
+import style from './style.scss';
+import classnames from 'classnames';
+
 
 const SideMenu = ({components}) => {
+
+  const className = classnames(
+    style.root,
+    {
+      [style.sidemenu]: true
+    }
+  );
   return (
-    <ul className="sidememu">
+    <Grid className={className} justify="flex-start" direction="column">
       {
-        components.map( name=>{
+        components.map( name =>{
           return (
-            <li key={name}>
+            <div key={name} className={style.menuitem}>
               <a href={`#${name}`}>{name}</a>
-            </li>
+            </div>
           );
         })
       }
-    </ul>
+    </Grid>
+
   );
 };
 

@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DemoContainer from '../democontainer/democontainer';
 import Api from '../api/api';
-
+import Grid from 'react-arsenal/Grid';
+import style from './style.scss';
 const ComponentPage = ({component}) => {
   //console.log(component);
   const {name, description, props, examples} = component;
   return (
-    <div className="componentpage">
+    <div className={style.root}>
       <h2>{name}</h2>
       <p>{description}</p>
       <h3>Example{examples.legth > 1 && "s"}</h3>

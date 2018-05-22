@@ -1,0 +1,39 @@
+@import "../../../../app/theme/theme";
+
+.root {
+  background-color: $palette-grey-50;
+  // position: fixed;
+  height: 100vh;
+  display: flex;
+}
+
+.sidemenu {
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1rem;
+  width: 5rem;
+  @include bp-large {
+    display: none;
+  }
+}
+
+.menuitem {
+  @include font-size(20px);
+  text-align: center;
+  width: 100%;
+  padding: 0.5rem;
+  a {
+    color: gray;
+    display: block;
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+    &:hover {
+      color: $color-secondary;
+      background-color: $gray-light;
+    }
+  }
+}

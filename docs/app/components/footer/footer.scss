@@ -2,9 +2,10 @@
 
 .footerblock {
   background-color: $color-p;
+  bottom: 0;
   color: $color-dark-contrast;
   height: 50px;
-  position: relative;
+  position: absolute;
   width: 100%;
   p {
     margin: 0 auto;
